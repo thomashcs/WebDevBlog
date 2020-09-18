@@ -4,52 +4,62 @@
 </head>
 
 <style>
-h1 {
-    display: flex;
-    color: rgb(123, 38, 202);
-    background-color: rgb(255, 255, 147);
-    justify-content: center;
-    align-items: center;
-}
+    body {
+        margin: 0;
+        background-color: #818aa3;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
 
-.first {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-}
+    header, footer {
+        background-color: #30332E;
+    }
 
-.meme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3em;
+        color: lightgrey;
+    }
 
-#font {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
-    font-size: x-large;
-}
+    p {
+        margin: 10px;
+        font-size: 1.25em;
+    }
+    #middle {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+    }
 
-#color {
-    font-family:fantasy;
-    font-style: bold;
-    font-size: xx-large;
-    color: darkblue;
-}
+    #left, #right {
+        background-color: #9BC59D;
+        flex-basis: 200px;
+    }
 
+    #center {
+        flex-grow: 1;
+    }
+
+    .meme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
 
-<Body>
+<body>
 
-    <h1>Welcome to my blog!</h1>
-
-    <div class = "first">
-        <p>This week we dove into the format of a web page. We learned that HTML provides the content, and CSS provides the format. We learned how to do things like </p>
-        <p id = "font">This</p>
-        <p> and</p>
-        <p id = "color">This</p>
-        <p>While we are beginning to learn the tools to style a webpage, I suspect I will have to do more research in order to learn what good design is like. I know nothing about how to layout a page, color theory, etc. Ant I suspect this first blog is going to be quite the eyesore. I took programming in highschool and the first thing we learned was HTML, that was 6 years ago. Time flies. In that class we never learned about CSS so we build exclusively ugly webpages. I'm glad we are diving into CSS so I can (once i learn what one looks like) make a half decent webpage. Enjoy this meme.</p>
+    <header><h1>Welcome to my blog!</h1></header>
+    <div id="middle">
+        <aside id="left"></aside>
+        <main id="center"> <p>Welcome to my second blog! This week we took a deeper look into css, specifically flexbox. We learned some more design idioms (is that even what they're called?), such as this one, which you called the "Holy Grail". I specifically liked this one because it's like java swing, which is pretty much my only UI experience. We also started to dive into JavaScript, which I have never touched before. I very frequently come accross memes about how awful it is... I guess its time I test that myself! I also looked into linking other html pages, and have linked my week 1 blog at the bottom of the page. For now I dont know what to put in the margins... I just think they look nice. Anyways, in the spirit of anti-Java-Script elitests enjoy the meme.</p>
+            <div class = "meme"> <img src = "https://i.redd.it/c2mitk41k5w11.png"></div>
+        </main>
+        <aside id="right"></aside>
     </div>
-
-    <div class = "meme"> <img src = "https://i.redd.it/yh24l3zgc2m51.jpg"></div>
-     
-</Body>
+    <footer><h2><a href="/w1.html">Week 1</a></h2></footer>
+</body>
