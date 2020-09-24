@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <title>Blog</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        background-color: #818aa3;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    header, footer {
+        background-color: #30332E;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3em;
+        color: lightgrey;
+    }
+
+    p {
+        margin: 10px;
+        font-size: 1.25em;
+    }
+    #middle {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #left, #right {
+        background-color: #9BC59D;
+        flex-basis: 200px;
+    }
+
+    #center {
+        flex-grow: 1;
+    }
+
+    .meme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+
+    <header><h1>Welcome to my blog!</h1></header>
+    <div id="middle">
+        <aside id="left"></aside>
+        <main id="center"> <p>Welcome to my second blog! This week we took a deeper look into css, specifically flexbox. We learned some more design idioms (is that even what they're called?), such as this one, which you called the "Holy Grail". I specifically liked this one because it's like java swing, which is pretty much my only UI experience. We also started to dive into JavaScript, which I have never touched before. I very frequently come accross memes about how awful it is... I guess its time I test that myself! I also looked into linking other html pages, and have linked my week 1 blog at the bottom of the page. For now I dont know what to put in the margins... I just think they look nice. Anyways, in the spirit of anti-Java-Script elitests enjoy the meme.</p>
+            <div class = "meme"> <img src = "https://i.redd.it/c2mitk41k5w11.png"></div>
+        </main>
+        <aside id="right"></aside>
+    </div>
+    <footer><h2><a href="/w1.html">Week 1</a></h2></footer>
+</body>
