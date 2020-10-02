@@ -11,7 +11,7 @@
 
     .parallax {
         position: relative;
-        background-image: url("night-1156601.jpg");
+        background-image: url("capitol.jpg");
 
         height: 100%;
 
@@ -50,13 +50,60 @@
         font-size: 1.25em;
         width: 50%;
         text-indent: 50px;
+        margin: 50px;
     }
 
-    #snippet {
+    #side {
+        width: 20%;
+    }
+
+    .img {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: black;
+        width: min-content;
+    }
+
+    #tyson {
+        position: relative;
+        display: block;
+    }
+
+    #snippet {
+        margin-top: 20px;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
+        opacity: .75;
+
+    }
+
+    .img:hover .overlay {
+        bottom: 0;
+        height: 100%;
+    }
+
+    .text {
+        white-space: nowrap; 
+        color:black;
+        font-size: 2em;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
     }
 
 </style>
@@ -68,22 +115,27 @@
     <div class = "middle">
 
         <div class = "center">
-            Good morning! For this weeks blog I decided to research the parallax effect. I remember you mentioning it in class a bit ago so I decided to look into it myself.
-            It seemed like it would be a complicated effect, however it was actually quite simple. I think it looks really good and will certainly be implementing it into my 
-            first project site. The one challenge I encountered was alligning the heading text, "Welcome to my blog" within the first parallax image. I didnt realize that it
-            was possible to use flexbox within a parallax image, but alas you can, and I think it has a pretty cool result. This is a snippet from my css which formats the 
-            parallax: 
+            Good morning! For this weeks blog I decided to research various image effects. My project 1 site is very image heavy, and there are many things you can do with images 
+            like hover effects, borders, shadows, and more. Images are very versatile in a website, as they can make good visuals, links, buttons, etc. Sometimes however, the image
+            itself does not give enough information, and in those instances it is useful to expand upon (both in size and writing) the image. Below, I used css to add a hover effect using the transform property, 
+            Try it out!
         </div>
 
     </div>
-    <div id = "snippet"><img src="snippet.PNG"></div>
-
     <div class = "middle">
-        <div class = "center">
-            As you can see it is super simple, theres really only 2 properties to set for the effect: background-image, and background-attachment. The other properties are for sizing
-            and placement of other objects etc. to get the above and bellow effect there are actually 2 parallax items, one before this div and one below it. I followed W3schools <a href = "https://www.w3schools.com/howto/howto_css_parallax.asp">how to parallax.</a>
+    <div class = "img">
+    <div id = "tyson"><img src="tyson.jpg"></div>
+    <div class = "overlay"><div class = "text">This is Mike Tyson and his tiger.</div></div>
+    </div>
+</div>
+    <div class = "middle">
+        <div class = "center" id = "side">
+            This is a relatively simple thing to do, however the format of the rest of the page being flex made it a little more difficult due to the absolute positioning of the hover item.
+            There were a few more properties I learned and messed with this week, such as opacity, border-radius, filter, and box-shadow. My resource for this information (and most of my html/css needs this semester) was <a href = "https://www.w3schools.com/css/css3_images.asp">w3schools styling images.</a>
+            To the right is the code segment showing how it was done.
             
         </div>
+        <img src = "snippet.PNG" id = "snippet">
     </div>
 
 

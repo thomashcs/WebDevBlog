@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <title>Blog</title>
+</head>
+
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .parallax {
+        position: relative;
+        background-image: url("night-1156601.jpg");
+
+        height: 100%;
+
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+
+    h1 {
+        margin: 0;
+        width: 40%;
+
+        background-color: cornsilk;
+        text-align: center;
+        font-size: 5em;
+
+
+    }
+
+    .middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    .center {
+        color: white;
+        font-size: 1.25em;
+        width: 50%;
+        text-indent: 50px;
+    }
+
+    #snippet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+
+</style>
+
+<body>
+
+    <div class = "parallax"><h1>Welcome to my blog</h1></div>
+
+    <div class = "middle">
+
+        <div class = "center">
+            Good morning! For this weeks blog I decided to research the parallax effect. I remember you mentioning it in class a bit ago so I decided to look into it myself.
+            It seemed like it would be a complicated effect, however it was actually quite simple. I think it looks really good and will certainly be implementing it into my 
+            first project site. The one challenge I encountered was alligning the heading text, "Welcome to my blog" within the first parallax image. I didnt realize that it
+            was possible to use flexbox within a parallax image, but alas you can, and I think it has a pretty cool result. This is a snippet from my css which formats the 
+            parallax: 
+        </div>
+
+    </div>
+    <div id = "snippet"><img src="snippet.PNG"></div>
+
+    <div class = "middle">
+        <div class = "center">
+            As you can see it is super simple, theres really only 2 properties to set for the effect: background-image, and background-attachment. The other properties are for sizing
+            and placement of other objects etc. to get the above and bellow effect there are actually 2 parallax items, one before this div and one below it. I followed W3schools <a href = "https://www.w3schools.com/howto/howto_css_parallax.asp">how to parallax.</a>
+            
+        </div>
+    </div>
+
+
+    <div class = "parallax"></div>
+</body>
