@@ -54,57 +54,26 @@
     }
 
     #side {
-        width: 20%;
-    }
-
-    .img {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        width: min-content;
+        width: 28%;
     }
 
     #tyson {
         position: relative;
-        display: block;
+        animation: tyson 7s linear infinite;
+    }
+
+    @keyframes tyson {
+        0%   { left:0px; top:0px;}
+        25%  { left:300px; top:0px;}
+        50%  { left:0px; top:0px;}
+        75%  { left:-300px; top:0px;}
+        100% { left:0px; top:0px;}
     }
 
     #snippet {
         margin-top: 20px;
     }
 
-    .overlay {
-        position: absolute;
-        bottom: 100%;
-        left: 0;
-        right: 0;
-        background-color: #ffffff;
-        overflow: hidden;
-        width: 100%;
-        height: 0;
-        transition: .5s ease;
-        opacity: .75;
-
-    }
-
-    .img:hover .overlay {
-        bottom: 0;
-        height: 100%;
-    }
-
-    .text {
-        white-space: nowrap; 
-        color:black;
-        font-size: 2em;
-        position: absolute;
-        overflow: hidden;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-    }
 
 </style>
 
@@ -115,27 +84,27 @@
     <div class = "middle">
 
         <div class = "center">
-            Good morning! For this weeks blog I decided to research various image effects. My project 1 site is very image heavy, and there are many things you can do with images 
-            like hover effects, borders, shadows, and more. Images are very versatile in a website, as they can make good visuals, links, buttons, etc. Sometimes however, the image
-            itself does not give enough information, and in those instances it is useful to expand upon (both in size and writing) the image. Below, I used css to add a hover effect using the transform property, 
-            Try it out!
+            Good morning! For this weeks blog I decided to research animations, as this is a required element of the first project. CSS makes this (as it does most things) pretty easy.
+            There are various animation properties, such as animation-name, animation-duration, animation-timing-function, and animation-iteration-count, and more. Most of these properties 
+            are pretty self explanatory, besides the name. The name is what is referenced by the @keyframes rule, which actually sets the translations of the image. All of these properties 
+            can be set individually, or the can be set in one line by simply using the animation, as I did and can be seen below. 
         </div>
 
     </div>
     <div class = "middle">
     <div class = "img">
     <div id = "tyson"><img src="tyson.jpg"></div>
-    <div class = "overlay"><div class = "text">This is Mike Tyson and his tiger.</div></div>
+    </div>
     </div>
 </div>
     <div class = "middle">
         <div class = "center" id = "side">
-            This is a relatively simple thing to do, however the format of the rest of the page being flex made it a little more difficult due to the absolute positioning of the hover item.
-            There were a few more properties I learned and messed with this week, such as opacity, border-radius, filter, and box-shadow. My resource for this information (and most of my html/css needs this semester) was <a href = "https://www.w3schools.com/css/css3_images.asp">w3schools styling images.</a>
-            To the right is the code segment showing how it was done.
+            As you can see, the animation properties are set in one line. The properties being set are: animation-name, animation-duration, animation-timing-function, and animation-iteration-count respectively.
+            I then use the @keyframes rule to set where the image will be at what stage of the animation, by moving the left side positive 300px the image translates to the right, and then by going
+            back to 0 its at its origin, and then -300px it moves it to the left, and finally finishing where it started to create a looping effect. The guide I used for this blog was <a href="https://www.w3schools.com/css/css3_animations.asp">w3schools</a> 
             
         </div>
-        <img src = "snippet.PNG" id = "snippet">
+        <img src = "snippet2.PNG" id = "snippet">
     </div>
 
 
