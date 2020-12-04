@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <title>Blog</title>
+</head>
+
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .parallax {
+        position: relative;
+        background-image: url("capitol.jpg");
+
+        height: 100%;
+
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+
+    h1 {
+        margin: 0;
+        width: 40%;
+
+        background-color: cornsilk;
+        text-align: center;
+        font-size: 5em;
+
+
+    }
+
+    .middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    .center {
+        color: white;
+        font-size: 1.25em;
+        width: 50%;
+        text-indent: 50px;
+        margin: 50px;
+    }
+
+    #side {
+        width: 28%;
+    }
+
+    #tyson {
+        position: relative;
+        animation: tyson 7s linear infinite;
+    }
+
+    @keyframes tyson {
+        0%   { left:0px; top:0px;}
+        25%  { left:300px; top:0px;}
+        50%  { left:0px; top:0px;}
+        75%  { left:-300px; top:0px;}
+        100% { left:0px; top:0px;}
+    }
+
+    #snippet {
+        margin-top: 20px;
+    }
+
+
+</style>
+
+<body>
+
+    <div class = "parallax"><h1>Welcome to my blog</h1></div>
+
+    <div class = "middle">
+
+        <div class = "center">
+            Good morning! For this weeks blog I decided to research animations, as this is a required element of the first project. CSS makes this (as it does most things) pretty easy.
+            There are various animation properties, such as animation-name, animation-duration, animation-timing-function, and animation-iteration-count, and more. Most of these properties 
+            are pretty self explanatory, besides the name. The name is what is referenced by the @keyframes rule, which actually sets the translations of the image. All of these properties 
+            can be set individually, or the can be set in one line by simply using the animation, as I did and can be seen below. 
+        </div>
+
+    </div>
+    <div class = "middle">
+    <div class = "img">
+    <div id = "tyson"><img src="tyson.jpg"></div>
+    </div>
+    </div>
+</div>
+    <div class = "middle">
+        <div class = "center" id = "side">
+            As you can see, the animation properties are set in one line. The properties being set are: animation-name, animation-duration, animation-timing-function, and animation-iteration-count respectively.
+            I then use the @keyframes rule to set where the image will be at what stage of the animation, by moving the left side positive 300px the image translates to the right, and then by going
+            back to 0 its at its origin, and then -300px it moves it to the left, and finally finishing where it started to create a looping effect. The guide I used for this blog was <a href="https://www.w3schools.com/css/css3_animations.asp">w3schools</a> 
+            
+        </div>
+        <img src = "snippet2.PNG" id = "snippet">
+    </div>
+
+
+    <div class = "parallax"></div>
+</body>
